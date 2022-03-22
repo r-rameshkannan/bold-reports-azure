@@ -113,7 +113,7 @@ $(document).ready(function () {
             var textValue = $('[data-id="login-provider-type"]').next().find("li:last").text();
             $('[data-id="login-provider-type"]').removeClass("disabled").children("span:first").text(textValue);
             if ($('[data-id="login-provider-type"]').children("span:first").text() == "None") {
-                $("#update-defaultauthlogin-settings").prop("disabled", true);
+                //$("#update-defaultauthlogin-settings").prop("disabled", true);
             }
             $("#login-provider-type").prop("disabled", false);
             $('[data-id="login-provider-type"]').removeClass("disabled").next().find("li").removeClass("disabled");
@@ -126,7 +126,7 @@ $(document).ready(function () {
             $('[data-id="login-provider-type"]').addClass("disabled").next().find("li:first").removeClass("disabled");
             $('[data-id="login-provider-type"]').children("span:first").text("None");
             $("#none-default").prop("disabled", false);
-            $("#update-defaultauthlogin-settings").prop("disabled", false);
+            //$("#update-defaultauthlogin-settings").prop("disabled", false);
         }
     });
 
@@ -134,16 +134,16 @@ $(document).ready(function () {
         if (location.href.match(/openid-settings/)) {
             $("#openid-settings").tab("show");
             $("#update-oauth-settings").hide();
-            $("#update-defaultauthlogin-settings").hide();
+            //$("#update-defaultauthlogin-settings").hide();
         }
         else if (location.href.match(/oauth-settings/)) {
             $("#oauth-settings").tab("show");
             $("#update-openid-settings").hide();
-            $("#update-defaultauthlogin-settings").hide();
+            //$("#update-defaultauthlogin-settings").hide();
         }
         else {
             $("#default-authentication-settings").tab("show");
-            $("#update-oauth-settings").hide();
+            $("#update-oauth-settings").show();
             $("#update-openid-settings").hide();
         }
     }
@@ -152,7 +152,7 @@ $(document).ready(function () {
         if ($(this).attr("id") == "oauth-settings") {
             $("#update-oauth-settings").show();
             $("#update-openid-settings").hide();
-            $("#update-defaultauthlogin-settings").hide();
+            //$("#update-defaultauthlogin-settings").hide();
             var query = (window.location.search).toString();
             if (query != "?tab=oauth-settings") {
                 history.pushState(null, '', '?tab=oauth-settings');
@@ -161,14 +161,14 @@ $(document).ready(function () {
         else if ($(this).attr("id") == "openid-settings") {
             $("#update-openid-settings").show();
             $("#update-oauth-settings").hide();
-            $("#update-defaultauthlogin-settings").hide();
+            //$("#update-defaultauthlogin-settings").hide();
             var query = (window.location.search).toString();
             if (query != "?tab=openid-settings") {
                 history.pushState(null, '', '?tab=openid-settings');
             }
         }
         else if ($(this).attr("id") == "default-authentication-settings") {
-            $("#update-defaultauthlogin-settings").show();
+            //$("#update-defaultauthlogin-settings").show();
             $("#update-openid-settings").hide();
             $("#update-oauth-settings").hide();
             var query = (window.location.search).toString();
@@ -177,7 +177,7 @@ $(document).ready(function () {
             }
         }
         else if ($(this).attr("id") == "default-authentication-settings-info") {
-            $("#update-defaultauthlogin-settings").hide();
+            //$("#update-defaultauthlogin-settings").hide();
             $("#update-openid-settings").hide();
             $("#update-oauth-settings").hide();
             var query = (window.location.search).toString();

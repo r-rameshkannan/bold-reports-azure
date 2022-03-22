@@ -158,8 +158,9 @@
                                 <div class="col-md-6 no-padding no-margin">
                                     <label class="app-textbox-label col-md-4 no-margin">[[[Client Secret]]]</label>
                                     <div class="col-md-8 no-margin form-input-field" ng-class="(oauthSettingsForm.oauthClientSecret.$dirty && oauthSettingsForm.oauthClientSecret.$invalid) ? 'has-error' : ''">
-                                        <input type="text" class="form-control col-md-6 no-margin" ng-model="oauthClientSecret" ng-init="oauthClientSecret='@ViewBag.OAuthSettings.OAuthAuthSettings.ClientSecret'" name="oauthClientSecret" placeholder="[[[Client Secret]]]" id="oauth-client-secret" data-ng-disabled="!oauthIsEnabled" required />
+                                        <input type="password" class="form-control col-md-6 no-margin" ng-model="oauthClientSecret" ng-init="oauthClientSecret='@ViewBag.OAuthSettings.OAuthAuthSettings.ClientSecret'" name="oauthClientSecret" placeholder="[[[Client Secret]]]" id="oauth-client-secret" data-ng-disabled="!oauthIsEnabled" required />
                                         <span class="validation-message" ng-show="oauthSettingsForm.oauthClientSecret.$error.required && oauthSettingsForm.oauthClientSecret.$dirty && oauthIsEnabled">[[[Please enter the client secret.]]]</span>
+                                        <span class="show-hide-password su su-show"></span>
                                     </div>
                                 </div>
                             </div>
@@ -308,8 +309,9 @@
                                 <div class="col-md-6 no-padding no-margin">
                                     <label class="app-textbox-label col-md-4 no-margin">[[[Client Secret]]]</label>
                                     <div class="col-md-8 no-margin form-input-field" ng-class="(openidSettingsForm.openidClientSecret.$dirty && openidSettingsForm.openidClientSecret.$invalid) ? 'has-error' : ''">
-                                        <input type="text" class="form-control col-md-6 no-margin" ng-model="openidClientSecret" ng-init="openidClientSecret='@ViewBag.OpenIDSettings.OIDCAuthSettings.ClientSecret'" name="openidClientSecret" placeholder="[[[Client Secret]]]" id="openid-client-secret" data-ng-disabled="!openidIsEnabled" required />
+                                        <input type="password" class="form-control col-md-6 no-margin" ng-model="openidClientSecret" ng-init="openidClientSecret='@ViewBag.OpenIDSettings.OIDCAuthSettings.ClientSecret'" name="openidClientSecret" placeholder="[[[Client Secret]]]" id="openid-client-secret" data-ng-disabled="!openidIsEnabled" required />
                                         <span class="validation-message" ng-show="openidSettingsForm.openidClientSecret.$error.required && openidSettingsForm.openidClientSecret.$dirty && openidIsEnabled">[[[Please enter the client secret.]]]</span>
+                                        <span class="show-hide-password su su-show"></span>
                                     </div>
                                 </div>
                             </div>
@@ -352,7 +354,7 @@
 
         <div class="admin-page-actions col-lg-12 col-md-12">
             <a href="@Url.Content("~/")" class="secondary-button pull-right" id="cancel-active-dir-settings" title="">[[[Cancel]]]</a>
-            <button type="submit" id="update-defaultauthlogin-settings" class="primary-button pull-right update-defaultauth-settings">[[[Save]]]</button>
+            @*<button type="submit" id="update-defaultauthlogin-settings" class="primary-button pull-right update-defaultauth-settings">[[[Save]]]</button>*@
             <button type="submit" id="update-oauth-settings" class="primary-button pull-right update-auth-settings" ng-disabled="oauthSettingsForm.$invalid">[[[Save]]]</button>
             <button type="submit" id="update-openid-settings" class="primary-button pull-right update-auth-settings" ng-disabled="openidSettingsForm.$invalid">[[[Save]]]</button>
         </div>

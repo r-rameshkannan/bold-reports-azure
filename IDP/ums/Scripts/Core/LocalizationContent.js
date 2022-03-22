@@ -177,7 +177,6 @@
             DataConnectorsSaveOffline: "[[[data connectors and save it offline to access your dashboard quickly.]]]",
             DatabaseMsg: "[[[This is where we store your dashboards, users, and their access permissions.]]]",
             DatabaseReportsMsg: "[[[This is where we store your reports, users, and their access permissions.]]]",
-            DsnValidator: "[[[Please select DSN.]]]",
 
             //AddTenant.js
             BoldReportsMultiTenancy: "[[[Bold Reports multi-tenancy can host multiple sites on a single instance by isolating the database and the resources for each site.]]]",
@@ -293,7 +292,11 @@
             SaveButton: "[[[Save]]]",
             CancelButton: "[[[Cancel]]]",
             DeleteCustomAttribute: "[[[Delete Attribute]]]",
-            DeleteAttributeConfirm: "[[[Are you sure you want to delete the attribute - ]]]"
+            DeleteAttributeConfirm: "[[[Are you sure you want to delete the attribute - ]]]",
+
+            //Api keys
+            ClicktoView: "[[[Click to view]]]",
+            ClicktoHide: "[[[Click to hide]]]"
         }
     }
 };
